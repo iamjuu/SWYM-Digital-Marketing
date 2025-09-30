@@ -2,13 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { Backgound, TestHero } from "../../public/assets";
 import AnimationText from "../../animation/text";
+import Button from "../button";
 
 const Index = () => {
   return (
     <div className="flex w-full">
       <div className="max-w-7xl flex flex-col md:flex-row mx-auto">
         {/* Left Side - Text */}
-        <div className="w-full md:w-1/2 flex items-center justify-center">
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
           <div className="text-left p-6 md:p-8">
             <AnimationText
               text="Smarter Infrastructure. Safer Communities. Stronger Connections."
@@ -24,6 +25,17 @@ const Index = () => {
               direction="top"
               className="text-base md:text-lg text-gray-600"
             />
+          </div>
+
+          <div className="w-full gap-5 flex">
+            <Button className="bg-[#FFCB05] text-white">
+
+              Get Quote
+            </Button>
+            <Button className=" border border-[#FFCB05]">
+
+Contect us
+</Button>
           </div>
         </div>
 
