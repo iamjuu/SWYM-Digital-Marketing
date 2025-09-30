@@ -1,12 +1,12 @@
 "use client";
-import { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Link from 'next/link';
-import Button from '../button';
-import { Menu, X, Phone } from 'lucide-react'; // Import Lucide icons
-import { Logo } from '../../public/assets';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
+import Button from "../button";
+import { Menu, X, Phone } from "lucide-react"; // Import Lucide icons
+import { Logo } from "../../public/assets";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/", label: "Projects" },
   { href: "/", label: "Blog" },
   { href: "/", label: "About" },
-  { href: "/", label: "Contact Us" },
+
 ];
 
 const Header = () => {
@@ -28,7 +28,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="w-full h-16 md:h-20">
+    <header className="w-full bg-transparent md:h-20">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -52,7 +52,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#0c8445] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#0c8445] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
+                className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#FFCB05] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#FFCB05] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
                 data-aos="flip-down"
                 data-aos-delay={index * 400}
               >
@@ -68,27 +68,25 @@ const Header = () => {
             data-aos-delay={1000}
           >
             <Button
-            
               href="/"
-              className="flex items-center px-4 py-1 border border-gray-300 rounded-[8px] text-gray-700 hover:[#0c8445] hover:border-gray-400 font-medium transition-all duration-200"
+              className="flex items-center px-4 py-1  border-[#FFCB05] rounded-[8px] text-gray-700 hover:[#FFCB05] font-medium transition-all duration-200"
             >
-            Contact Us
+              Contact Us
             </Button>
           </div>
 
-<div className="md:hidden">
-  <Button
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-    className="p-2 rounded-[8px] text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-  >
-    {isMenuOpen ? (
-      <X color="black" className="h-6 w-6" />
-    ) : (
-      <Menu color="black" className="h-6 w-6" />
-    )}
-  </Button>
-</div>
-
+          <div className="md:hidden">
+            <Button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-[8px] text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+            >
+              {isMenuOpen ? (
+                <X color="black" className="h-6 w-6" />
+              ) : (
+                <Menu color="black" className="h-6 w-6" />
+              )}
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -116,7 +114,7 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center hover:text-[#0C8445] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
+                  className="flex items-center hover:text-[#FFCB05] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
                   data-aos="flip-down"
                   data-aos-delay={index * 100}
                 >
