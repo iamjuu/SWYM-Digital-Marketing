@@ -1,42 +1,44 @@
 import { AnimatedTestimonials } from "@/ui/card/card";
-
+import {Card1,Card2,Card3,Card4,Card5,Card6} from "../../public/assets"
 export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Affordable, compliant, high-speed Wi-Fi with unlimited usage and 24/7 support — built for labour accommodations across the UAE.",
+      name: "Labour Camp Wi-Fi",
+      designation: "Smart Connectivity",
+      src: Card1,
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+        " Reliable Wi-Fi solutions for staff housing with 99.9% uptime, modern equipment, and cost-effective digital access systems.",
+      name: "Staff Accommodation Wi-Fi",
+      designation: "Staff Accommodation Wi-Fi Smart Connectivity",
+      src: Card2,    },
     {
       quote:
         "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
       name: "Emily Watson",
       designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+      src: Card3,    },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+        "HV & LV electrical installations and maintenance for commercial, industrial, and residential projects — safe, compliant, and reliable across the UAE.",
+      name: "Electrical Works",
+      designation: "Smart Infrastructure",
+      src: Card4,    },
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+        " 24/7 surveillance and advanced access control systems to keep your people, property, and assets secure.",
+      name: "CCTV & Security",
+      designation: "Smart Protection",
+      src: Card5,    },
+      {
+        quote:
+          " Structured cabling, VoIP, and telephone solutions that keep your business connected without interruptions.",
+        name: "Networking & Telephone",
+        designation: "Smart Connectivity",
+        src: Card6,    },
   ];
   return <AnimatedTestimonials testimonials={testimonials} />;
 }

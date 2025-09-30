@@ -6,6 +6,7 @@ import Support from "@/components/support"
 import Carousel from "@/components/caroseal"
 import { Backgound } from "@/public/assets";
 import Service from "@/components/service"
+import Footer from "@/components/footer"
 import { Bolt, Users, LineChart, Clock, Ticket, Database } from 'lucide-react';
 export default function Home() {
 
@@ -59,6 +60,7 @@ export default function Home() {
   <Support/>
   <Carousel items={items} />
   <Service/>
+  <Footer/>
   </div>
    </div>
   );
