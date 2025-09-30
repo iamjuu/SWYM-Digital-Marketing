@@ -72,11 +72,13 @@ const index = () => {
 
     {/* Bottom paragraph */}
         <div className="w-full mt-4 md:mt-8" data-aos="fade-up" data-aos-delay="150">
-          <p className="w-full rounded-xl border border-[#FFCB05] bg-white p-6 text-base leading-relaxed text-gray-700 shadow-sm">
+            <div className='px-20 '>
+          <p className="w-full py-10 rounded-xl border border-[#FFCB05] bg-white/30 p-6 text-base leading-relaxed text-gray-700 shadow-sm">
         Tabdeel delivers The Change You Need in electrical, security, and automation systems. From powering your
         operations to protecting your people and connecting your spaces, we provide future-ready solutions trusted
         across the UAE.
       </p>
+      </div>
     </div>
   </div>
 </div>
