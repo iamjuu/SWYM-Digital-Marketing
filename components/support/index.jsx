@@ -8,8 +8,7 @@ const index = () => {
         {/* Main Title - Centered */}
         <div
           className="text-center mb-12 lg:mb-16"
-          data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos="fade-down"
         ></div>
 
         {/* Content Grid */}
@@ -17,8 +16,7 @@ const index = () => {
           {/* Left Content */}
           <div
             className="flex flex-col justify-center space-y-6 lg:space-y-8"
-            data-aos="fade-up"
-            data-aos-delay="200"
+            data-aos="fade-down"
           >
             <>
 
@@ -41,7 +39,7 @@ For Smarter, Safer Businesses
           </div>
 
           {/* Right Content - Images Grid */}
-          <div className="relative" data-aos="fade-up" data-aos-delay="300">
+          <div className="relative" data-aos="fade-up">
             <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 h-80 sm:h-96 lg:h-[28rem] xl:h-[32rem]">
               {/* Large Exterior Design Image - Bottom Left (spans 2 rows) */}
               <div className="row-span-2 col-span-1">
