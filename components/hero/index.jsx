@@ -28,14 +28,8 @@ const Index = () => {
           </div>
 
           <div className="w-full gap-5 flex">
-            <Button className="bg-[#FFCB05] text-white">
-
-              Get Quote
-            </Button>
-            <Button className=" border border-[#FFCB05]">
-
-Contect us
-</Button>
+            <Button className="bg-[#FFCB05] text-white">Get Quote</Button>
+            <Button className=" border border-[#FFCB05]">Contect us</Button>
           </div>
         </div>
 
