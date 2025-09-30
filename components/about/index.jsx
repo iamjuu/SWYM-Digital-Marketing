@@ -38,7 +38,7 @@ const index = () => {
     {/* Left: Image + Right: Features */}
         <div className="w-full flex flex-col md:flex-row gap-6" data-aos="fade-up">
       {/* Image */}
-          <div className="w-full md:w-[40%] flex justify-center md:justify-start" data-aos="zoom-in" data-aos-delay="100">
+          <div className="w-full  md:w-[40%] flex justify-center md:justify-start" data-aos="zoom-in" data-aos-delay="100">
         <Image
           src={AboutImage}
           alt="About Tabdeel"
@@ -72,7 +72,7 @@ const index = () => {
 
     {/* Bottom paragraph */}
         <div className="w-full mt-4 md:mt-8" data-aos="fade-up" data-aos-delay="150">
-            <div className='px-20 '>
+            <div className=' px-2 md:px-20 '>
           <p className="w-full py-10 rounded-xl border border-[#FFCB05] bg-white/30 p-6 text-base leading-relaxed text-gray-700 shadow-sm">
         Tabdeel delivers The Change You Need in electrical, security, and automation systems. From powering your
         operations to protecting your people and connecting your spaces, we provide future-ready solutions trusted

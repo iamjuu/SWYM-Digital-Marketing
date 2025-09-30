@@ -1,10 +1,12 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { Backgound, TestHero } from "../../public/assets";
 import AnimationText from "../../animation/text";
 import Button from "../button";
 
 const Index = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className="flex w-full">
       <div className="max-w-7xl flex flex-col md:flex-row mx-auto">
@@ -34,11 +36,17 @@ const Index = () => {
         </div>
 
         {/* Right Side - Image */}
-        <div className="w-full md:w-1/2 flex items-center justify-center mt-6 md:mt-0">
+        <div className="w-full z-[-1] md:w-1/2 flex items-center justify-center mt-6 md:mt-0 relative">
+          {!imageLoaded && (
+            <div className="absolute inset-0 m-0 rounded-lg bg-gray-200 animate-pulse" />
+          )}
           <Image
             src={TestHero}
             alt="Background"
-            className="object-cover w-full h-auto max-h-[400px] md:max-h-full"
+            onLoad={() => setImageLoaded(true)}
+            className={`object-cover w-full h-auto max-h-[400px] md:max-h-full transition-opacity duration-300 ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
           />
         </div>
       </div>

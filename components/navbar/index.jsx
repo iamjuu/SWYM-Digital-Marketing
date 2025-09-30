@@ -9,12 +9,11 @@ import { Logo } from "../../public/assets";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/", label: "Solution" },
-  { href: "/", label: "Projects" },
-  { href: "/", label: "Blog" },
-  { href: "/", label: "About" },
-
+  { href: "#hero", label: "Home" },
+  { href: "#solution", label: "Solution" },
+  { href: "#project", label: "Projects" },
+  { href: "#blog", label: "Blog" },
+  { href: "#about", label: "About" },
 ];
 
 const Header = () => {
@@ -28,7 +27,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="w-full bg-transparent">
+    <header className=" z-50 w-full bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -50,7 +49,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-[72px]">
             {navLinks.map((link, index) => (
               <Link
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#FFCB05] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#FFCB05] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
                 data-aos="flip-down"
@@ -68,7 +67,7 @@ const Header = () => {
             data-aos-delay={1000}
           >
             <Button
-              href="/"
+              href="#contact"
               className="flex items-center px-4 py-1  border-[#FFCB05] border rounded-[8px] text-gray-700 hover:[#FFCB05] font-medium transition-all duration-200"
             >
               Contact Us
@@ -111,7 +110,7 @@ const Header = () => {
             <nav className="flex flex-col space-y-2 px-4 pt-2 pb-4">
               {navLinks.map((link, index) => (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="flex items-center hover:text-[#FFCB05] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
@@ -122,7 +121,7 @@ const Header = () => {
                 </Link>
               ))}
               <Link
-                href="/"
+                href="#contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#FFCB05] hover:bg-gray-50 transition-all duration-500 ease-in-out delay-100 hover:scale-105 hover:shadow-sm"
                 data-aos="flip-down"
