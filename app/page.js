@@ -12,8 +12,11 @@ export default function Home() {
     backgroundRepeat: "repeat",
   }}
   className="min-h-screen  px-2 ">
+    <div className="flex flex-col ">
+
   <Navbar/>
   <Hero/>
+    </div>
    </div>
   );
 }

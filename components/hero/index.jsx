@@ -1,12 +1,43 @@
-import React from 'react'
-import {Backgound} from "../../public/assets"
-const index = () => {
-  return (
-    <div
- 
-  >
-    </div>
-  )
-}
+import React from "react";
+import Image from "next/image";
+import { Backgound, TestHero } from "../../public/assets";
+import AnimationText from "../../animation/text";
 
-export default index
+const Index = () => {
+  return (
+    <div className="flex w-full">
+      <div className="max-w-7xl flex flex-col md:flex-row mx-auto">
+        {/* Left Side - Text */}
+        <div className="w-full md:w-1/2 flex items-center justify-center">
+          <div className="text-left p-6 md:p-8">
+            <AnimationText
+              text="Smarter Infrastructure. Safer Communities. Stronger Connections."
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-xl sm:text-2xl md:text-3xl mb-6 md:mb-8"
+            />
+            <AnimationText
+              text="From power to protection, Tabdeel delivers the change you need — smarter, scalable, and future-ready IT & security solutions trusted across the UAE."
+              delay={80}
+              animateBy="words"
+              direction="top"
+              className="text-base md:text-lg text-gray-600"
+            />
+          </div>
+        </div>
+
+        {/* Right Side - Image */}
+        <div className="w-full md:w-1/2 flex items-center justify-center mt-6 md:mt-0">
+          <Image
+            src={TestHero}
+            alt="Background"
+            className="object-cover w-full h-auto max-h-[400px] md:max-h-full"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Index;

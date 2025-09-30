@@ -28,7 +28,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="w-full bg-transparent md:h-20">
+    <header className="w-full bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -69,7 +69,7 @@ const Header = () => {
           >
             <Button
               href="/"
-              className="flex items-center px-4 py-1  border-[#FFCB05] rounded-[8px] text-gray-700 hover:[#FFCB05] font-medium transition-all duration-200"
+              className="flex items-center px-4 py-1  border-[#FFCB05] border rounded-[8px] text-gray-700 hover:[#FFCB05] font-medium transition-all duration-200"
             >
               Contact Us
             </Button>
