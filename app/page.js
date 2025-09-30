@@ -8,6 +8,7 @@ import { Backgound } from "@/public/assets";
 import Service from "@/components/service"
 import Footer from "@/components/footer"
 import QuickAnswer from "@/components/quickanswer"
+import Contact from "@/components/contect"
 import { Bolt, Users, LineChart, Clock, Ticket, Database } from 'lucide-react';
 export default function Home() {
 
@@ -60,8 +61,9 @@ export default function Home() {
   <About/>
   <Support/>
   <Carousel items={items} />
-  <QuickAnswer/>
+  <Contact/>
   <Service/>
+  <QuickAnswer/>
   <Footer/>
   </div>
    </div>

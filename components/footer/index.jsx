@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Logo } from "@/public/assets";
 import Image from "next/image";
@@ -23,6 +23,20 @@ const Footer = () => {
       setShowToast(false);
     }, 3000);
   };
+
+  useEffect(() => {
+    const onToast = (e) => {
+      setShowToast(true);
+      // Auto-hide after 3s
+      const timeoutId = setTimeout(() => setShowToast(false), 3000);
+      return () => clearTimeout(timeoutId);
+    };
+
+    window.addEventListener("app:toast", onToast);
+    return () => {
+      window.removeEventListener("app:toast", onToast);
+    };
+  }, []);
 
   return (
     <>
@@ -292,10 +306,8 @@ const Footer = () => {
              <input
   type="email"
   placeholder="Enter your email"
-  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm 
-             placeholder:text-muted-foreground 
-             focus:outline-none focus:border-0 focus:border-[#FFCB05] 
-             disabled:cursor-not-allowed disabled:opacity-50"
+  className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
+
 />
 
               </div>

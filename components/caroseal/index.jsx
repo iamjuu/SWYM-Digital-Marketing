@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
-const Carousel = ({ items }) => {
+const   Carousel = ({ items }) => {
   const containerRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
 

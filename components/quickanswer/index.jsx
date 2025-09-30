@@ -51,7 +51,7 @@ export default function QuickAnswer() {
   };
 
   return (
-    <section id="faqs" className="w-full bg-white text-black">
+    <section id="faqs" className="w-full text-black">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left column: Heading and CTA */}
