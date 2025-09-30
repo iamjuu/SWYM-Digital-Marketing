@@ -1,16 +1,14 @@
 
 
-const Button = ({ title, as = "button", ...props }) => {
+const Button = ({ title, as = "button", className = "", children, ...props }) => {
   const Component = as;
   return (
-    <div>
-      <Component 
-        className="bg-[#f97316] text-white px-4 py-2 rounded-md hover:bg-orange-700 transition duration-300 ease-in-out cursor-pointer"
-        {...props}
-      >
-        {title}
-      </Component>
-    </div>
+    <Component
+      className={` text-white px-4 py-2 rounded-md  transition duration-300 ease-in-out cursor-pointer ${className}`}
+      {...props}
+    >
+      {children ?? title}
+    </Component>
   );
 };
 

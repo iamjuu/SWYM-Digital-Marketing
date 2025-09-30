@@ -4,15 +4,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
 import Button from '../button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { Menu, X, Phone } from 'lucide-react'; // Import Lucide icons
 import { Logo } from '../../public/assets';
 import Image from 'next/image';
 
 const navLinks = [
-  { href: "/", label: "Home",  },
-  { href: "/business-sector", label: "Business Sector", },
-  { href: "/Vision-Mission", label: "Vision & Mission",  },
+  { href: "/", label: "Home" },
+  { href: "/business-sector", label: "Business Sector" },
+  { href: "/Vision-Mission", label: "Vision & Mission" },
 ];
 
 const Header = () => {
@@ -20,23 +19,27 @@ const Header = () => {
 
   useEffect(() => {
     AOS.init({
-         duration: 800,
-         once: false,
-       })
-  }, [])
-   return (
-   <header className="w-full h-16 md:h-20 ">
-     <div className="max-w-7xl  bg-red-300 mx-auto ">
-       <div className="flex justify-between items-center  ">
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
+  return (
+    <header className="w-full h-16 md:h-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex ">
-            <Link href="/" className="flex items-center ">
-                 <Image 
-            data-aos="fade-up"
-            data-aos-delay={100}
-            src={Logo} alt="logo" 
-            className="h-10 w-auto md:h-12"
-            width={198} height={72} />
+          <div className="flex">
+            <Link href="/" className="flex items-center">
+              <Image
+                data-aos="fade-up"
+                data-aos-delay={100}
+                src={Logo}
+                alt="logo"
+                className="w-32 h-32"
+                width={198}
+                height={72}
+              />
             </Link>
           </div>
 
@@ -46,7 +49,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-[#FFCB05]   font-medium  duration-700 delay-200"
+                className="hover:text-[#FFCB05] font-medium duration-700 delay-200"
                 data-aos="flip-down"
                 data-aos-delay={index * 400}
               >
@@ -57,53 +60,52 @@ const Header = () => {
 
           {/* Desktop Contact Button */}
           <div
-          
-          
-          className="hidden md:flex items-center"
-          data-aos="flip-up"
-          data-aos-delay={1000}
+            className="hidden md:flex  items-center"
+            data-aos="flip-up"
+            data-aos-delay={1000}
           >
             <Link
               href="/contact"
-              className="flex items-center  px-4 py-1 border border-gray-300 rounded-[8px] text-gray-700 hover:bg-gray-50 hover:border-gray-400 font-medium transition-all duration-200"
+              className="flex items-center px-4 py-1 border border-gray-300 rounded-[8px] text-gray-700 hover:bg-gray-50 hover:border-gray-400 font-medium transition-all duration-200"
             >
-              {/* <Phone className="w-4 h-4" /> */}
               <span>Contact Us</span>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-[8px] text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-            >
-              {isMenuOpen ? (
-                <FontAwesomeIcon icon={faXmark} className="h-6 w-6" />
-              ) : (
-                <FontAwesomeIcon icon={faBars} className="h-6 w-6" />
-              )}
-            </Button>
-          </div>
+          {/* Menu button (visible on all sizes) */}
+         {/* Menu button (visible only on mobile) */}
+<div className="md:hidden">
+  <Button
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+    className="p-2 rounded-[8px] text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+  >
+    {isMenuOpen ? (
+      <X color="black" className="h-6 w-6" />
+    ) : (
+      <Menu color="black" className="h-6 w-6" />
+    )}
+  </Button>
+</div>
+
         </div>
       </div>
 
-                {/* Mobile Menu */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <>
           {/* Backdrop overlay with blur */}
-          <div 
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden" 
+          <div
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
-                     <div className="md:hidden bg-white border-t border-gray-100 fixed top-4 left-0 w-full shadow-lg z-50">
+          <div className="md:hidden bg-white border-t border-gray-100 fixed top-4 left-0 w-full shadow-lg z-50">
             {/* Close button at the top */}
-            <div className="flex justify-end  border-b border-gray-100">
+            <div className="flex justify-end border-b border-gray-100">
               <Button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 rounded-[8px] text-gray-700 hover:text-gray-900 hover:bg-gray-100"
               >
-                <FontAwesomeIcon icon={faXmark} className="h-5 w-5" />
+                <X color="black" className="h-5 w-5" />
               </Button>
             </div>
             <nav className="flex flex-col space-y-2 px-4 pt-2 pb-4">
@@ -112,7 +114,7 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center  hover:text-[#FFCB05] space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 "
+                  className="flex items-center hover:text-[#FFCB05] space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700"
                   data-aos="flip-down"
                   data-aos-delay={index * 100}
                 >
@@ -125,7 +127,7 @@ const Header = () => {
                 className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#FFCB05] hover:bg-gray-50 transition-all duration-500 ease-in-out delay-100 hover:scale-105 hover:shadow-sm"
                 data-aos="flip-down"
               >
-                <FontAwesomeIcon icon={faPhone} className="w-5 h-5" />
+                <Phone color="black" className="w-5 h-5" />
                 <span>Contact Us</span>
               </Link>
             </nav>
