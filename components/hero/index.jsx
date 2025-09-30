@@ -36,7 +36,7 @@ const Index = () => {
         </div>
 
         {/* Right Side - Image */}
-        <div className="w-full md:w-1/2 flex items-center justify-center mt-6 md:mt-0 relative">
+        <div className="w-full z-[-1] md:w-1/2 flex items-center justify-center mt-6 md:mt-0 relative">
           {!imageLoaded && (
             <div className="absolute inset-0 m-0 rounded-lg bg-gray-200 animate-pulse" />
           )}

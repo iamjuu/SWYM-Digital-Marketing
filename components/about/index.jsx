@@ -38,7 +38,7 @@ const index = () => {
     {/* Left: Image + Right: Features */}
         <div className="w-full flex flex-col md:flex-row gap-6" data-aos="fade-up">
       {/* Image */}
-          <div className="w-full md:w-[40%] flex justify-center md:justify-start" data-aos="zoom-in" data-aos-delay="100">
+          <div className="w-full  md:w-[40%] flex justify-center md:justify-start" data-aos="zoom-in" data-aos-delay="100">
         <Image
           src={AboutImage}
           alt="About Tabdeel"
