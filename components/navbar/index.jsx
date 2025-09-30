@@ -10,8 +10,11 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/business-sector", label: "Business Sector" },
-  { href: "/Vision-Mission", label: "Vision & Mission" },
+  { href: "/", label: "Solution" },
+  { href: "/", label: "Projects" },
+  { href: "/", label: "Blog" },
+  { href: "/", label: "About" },
+  { href: "/", label: "Contact Us" },
 ];
 
 const Header = () => {
@@ -36,7 +39,7 @@ const Header = () => {
                 data-aos-delay={100}
                 src={Logo}
                 alt="logo"
-                className="w-32 h-32"
+                className="w-36 h-36"
                 width={198}
                 height={72}
               />
@@ -49,7 +52,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-[#FFCB05] font-medium duration-700 delay-200"
+                className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#0c8445] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#0c8445] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
                 data-aos="flip-down"
                 data-aos-delay={index * 400}
               >
@@ -64,16 +67,15 @@ const Header = () => {
             data-aos="flip-up"
             data-aos-delay={1000}
           >
-            <Link
-              href="/contact"
-              className="flex items-center px-4 py-1 border border-gray-300 rounded-[8px] text-gray-700 hover:bg-gray-50 hover:border-gray-400 font-medium transition-all duration-200"
+            <Button
+            
+              href="/"
+              className="flex items-center px-4 py-1 border border-gray-300 rounded-[8px] text-gray-700 hover:[#0c8445] hover:border-gray-400 font-medium transition-all duration-200"
             >
-              <span>Contact Us</span>
-            </Link>
+            Contact Us
+            </Button>
           </div>
 
-          {/* Menu button (visible on all sizes) */}
-         {/* Menu button (visible only on mobile) */}
 <div className="md:hidden">
   <Button
     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -114,7 +116,7 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center hover:text-[#FFCB05] space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700"
+                  className="flex items-center hover:text-[#0C8445] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
                   data-aos="flip-down"
                   data-aos-delay={index * 100}
                 >
@@ -122,7 +124,7 @@ const Header = () => {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="/"
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#FFCB05] hover:bg-gray-50 transition-all duration-500 ease-in-out delay-100 hover:scale-105 hover:shadow-sm"
                 data-aos="flip-down"
